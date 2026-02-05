@@ -35,8 +35,8 @@ export function Notifications() {
   return (
     <div className="space-y-10">
       <div>
-        <h1 className="text-2xl font-bold text-organic-ink">Notifications</h1>
-        <p className="text-organic-muted mt-1">
+        <h1 className="text-2xl font-bold text-organic-ink tracking-tight">Toasts & alerts</h1>
+        <p className="text-organic-muted mt-1 text-sm">
           Toasts and alerts — inspired by{' '}
           <a
             href="https://coderthemes.com/upbit/layouts/default/ui-notifications.html"

@@ -111,8 +111,8 @@ export function ListFiltersTable() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold text-organic-ink">Orders</h1>
-        <p className="text-organic-muted mt-1">List with filters and sortable table</p>
+        <h1 className="text-2xl font-bold text-organic-ink tracking-tight">List & table</h1>
+        <p className="text-organic-muted mt-1 text-sm">Filters, sortable table, pagination — for tickets, orders, or data tables</p>
       </div>
 
       <DataToolbar>

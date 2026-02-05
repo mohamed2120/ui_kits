@@ -3,10 +3,20 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "main": "./src/ui/index.ts",
+  "exports": {
+    ".": "./src/ui/index.ts",
+    "./ui/*": "./src/ui/*",
+    "./theme": "./src/ui/theme/tokens.ts"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
   },
   "dependencies": {
     "clsx": "^2.1.1",

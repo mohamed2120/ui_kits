@@ -15,7 +15,7 @@ export function CalendarDemo() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-2xl font-bold text-organic-ink tracking-tight">Calendars</h1>
+        <h1 className="text-2xl font-bold text-organic-ink tracking-tight">Calendar</h1>
         <p className="text-organic-muted mt-1 text-sm">Month, mini, week strip, and agenda views</p>
       </div>
 

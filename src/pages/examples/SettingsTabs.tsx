@@ -13,8 +13,8 @@ export function SettingsTabs() {
   return (
     <div className="space-y-8 max-w-3xl">
       <div>
-        <h1 className="text-2xl font-bold text-organic-ink">Settings</h1>
-        <p className="text-organic-muted mt-1">Manage your account and preferences</p>
+        <h1 className="text-2xl font-bold text-organic-ink tracking-tight">Forms</h1>
+        <p className="text-organic-muted mt-1 text-sm">Inputs, tabs, switch, checkbox, and form patterns</p>
       </div>
 
       <Tabs value={tab} onValueChange={setTab}>

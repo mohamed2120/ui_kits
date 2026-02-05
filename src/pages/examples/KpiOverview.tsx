@@ -13,8 +13,8 @@ export function KpiOverview() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-2xl font-bold text-organic-ink tracking-tight">KPI Overview</h1>
-        <p className="text-organic-muted mt-1 text-sm">Key metrics at a glance</p>
+        <h1 className="text-2xl font-bold text-organic-ink tracking-tight">Level 2.1</h1>
+        <p className="text-organic-muted mt-1 text-sm">KPI Overview — key metrics at a glance</p>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

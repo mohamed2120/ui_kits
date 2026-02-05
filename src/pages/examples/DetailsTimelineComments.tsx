@@ -1,22 +1,38 @@
 import { Card, CardHeader, CardTitle, CardContent } from '@/ui/Card'
 import { Badge } from '@/ui/Badge'
-import { Button } from '@/ui/Button'
-import { Input } from '@/ui/Input'
+import { Breadcrumb } from '@/ui/Breadcrumb'
+import { CommentThread } from '@/ui/procurement'
 import { sampleTimeline, sampleComments, sampleOrders } from '@/data/sampleData'
 import { cn } from '@/lib/utils'
 
 const order = sampleOrders[0]
 
+const commentsForThread = sampleComments.map((c) => ({
+  id: c.id,
+  author: c.author,
+  content: c.content,
+  timestamp: c.createdAt,
+}))
+
 export function DetailsTimelineComments() {
   return (
     <div className="space-y-8 max-w-4xl">
       <div>
-        <h1 className="text-2xl font-bold text-organic-ink">Order details</h1>
-        <p className="text-organic-muted mt-1">{order.id} · {order.customer}</p>
+        <Breadcrumb
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Orders', href: '/examples/list' },
+            { label: order.id },
+          ]}
+        />
+        <h1 className="text-2xl font-bold text-organic-ink tracking-tight mt-3">Layouts</h1>
+        <p className="text-organic-muted mt-1 text-sm">
+          Detail layout with timeline and comments — example: Order {order.id} · {order.customer}
+        </p>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-3">
-        <Card className="lg:col-span-2">
+        <Card className="lg:col-span-2" variant="elevated">
           <CardHeader>
             <CardTitle>Timeline</CardTitle>
             <p className="text-sm text-organic-muted mt-1">
@@ -55,7 +71,7 @@ export function DetailsTimelineComments() {
         </Card>
 
         <div className="space-y-6">
-          <Card>
+          <Card variant="elevated">
             <CardHeader>
               <CardTitle>Summary</CardTitle>
             </CardHeader>
@@ -69,38 +85,29 @@ export function DetailsTimelineComments() {
                 <span className="font-medium">${order.amount.toFixed(2)}</span>
               </div>
               <div className="flex justify-between text-sm">
+                <span className="text-organic-muted">Customer</span>
+                <span>{order.customer}</span>
+              </div>
+              <div className="flex justify-between text-sm">
                 <span className="text-organic-muted">Date</span>
                 <span>{order.date}</span>
               </div>
             </CardContent>
           </Card>
 
-          <Card>
+          <Card variant="elevated">
             <CardHeader>
               <CardTitle>Comments</CardTitle>
               <p className="text-sm text-organic-muted mt-1">
-                {sampleComments.length} comments
+                {sampleComments.length} comment{sampleComments.length !== 1 ? 's' : ''}
               </p>
             </CardHeader>
-            <CardContent className="space-y-4">
-              {sampleComments.map((c) => (
-                <div
-                  key={c.id}
-                  className="rounded-organic-lg bg-organic-sand/50 p-3 border border-organic-border"
-                >
-                  <p className="font-medium text-organic-ink text-sm">{c.author}</p>
-                  <p className="text-sm text-organic-muted mt-1">{c.content}</p>
-                  <p className="text-xs text-organic-muted mt-2">{c.createdAt}</p>
-                </div>
-              ))}
-              <div className="flex gap-2">
-                <Input
-                  placeholder="Add a comment..."
-                  aria-label="New comment"
-                  className="flex-1"
-                />
-                <Button size="sm">Send</Button>
-              </div>
+            <CardContent>
+              <CommentThread
+                comments={commentsForThread}
+                onAddComment={() => {}}
+                placeholder="Add a comment..."
+              />
             </CardContent>
           </Card>
         </div>

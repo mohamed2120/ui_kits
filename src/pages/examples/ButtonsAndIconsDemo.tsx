@@ -20,8 +20,8 @@ export function ButtonsAndIconsDemo() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-2xl font-bold text-organic-ink tracking-tight">Buttons & Icons</h1>
-        <p className="text-organic-muted mt-1 text-sm">Variants, sizes, icon buttons, and icon set</p>
+        <h1 className="text-2xl font-bold text-organic-ink tracking-tight">Base UI</h1>
+        <p className="text-organic-muted mt-1 text-sm">Buttons, icon buttons, and button groups</p>
       </div>
 
       <Card variant="elevated">
@@ -110,18 +110,6 @@ export function ButtonsAndIconsDemo() {
           <IconButton variant="ghost" size="md" aria-label="More"><MoreVerticalIcon /></IconButton>
           <IconButton variant="ghost" size="sm" aria-label="Alert"><AlertCircleIcon /></IconButton>
           <IconButton variant="primary" size="lg" aria-label="Download"><DownloadIcon /></IconButton>
-        </CardContent>
-      </Card>
-
-      <Card variant="elevated">
-        <CardHeader>
-          <CardTitle>Icon set</CardTitle>
-          <CardDescription>Available icons: Menu, Chart, List, FileText, Settings, Home, Search, Bell, Inbox, Calendar, Alarm, ChevronLeft/Right, Plus, Minus, Edit, Trash, Download, Upload, Filter, MoreVertical, MoreHorizontal, Check, X, BarChart, PieChart, TrendingUp, AlertCircle</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p className="text-sm text-organic-muted">
-            Import from <code className="rounded bg-organic-sand px-1">@/ui/icons</code> and use inside Button or IconButton.
-          </p>
         </CardContent>
       </Card>
     </div>

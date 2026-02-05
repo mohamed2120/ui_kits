@@ -18,7 +18,11 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173). Use the sidebar to open the example pages.
+Open [http://localhost:9005](http://localhost:9005). Use the sidebar to open the example pages.
+
+## Use this kit in your own project
+
+See **[INTEGRATION.md](./INTEGRATION.md)** for step-by-step instructions: install via local path or Git, configure Vite and Tailwind, add the theme and CSS variables, and import components.
 
 ## Folder structure
 
