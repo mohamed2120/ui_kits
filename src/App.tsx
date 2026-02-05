@@ -93,7 +93,7 @@ const navConfig: NavConfig = {
             { to: '/examples/more', label: 'Carousel & more', icon: <ListIcon /> },
           ],
         },
-        { to: '/examples/icons', label: 'Icons', icon: <TagIcon /> },
+        { to: '/examples/icons', label: 'Icons', icon: <TagIcon />, badge: '5000', badgeVariant: 'info' },
         { to: '/examples/settings', label: 'Forms', icon: <FileTextIcon /> },
         { to: '/examples/notifications', label: 'Toasts & alerts', icon: <BellIcon /> },
         { to: '/examples/alarms', label: 'Alarms', icon: <AlarmIcon /> },
